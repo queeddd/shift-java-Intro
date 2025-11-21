@@ -46,7 +46,6 @@ public class ReplaceCharWithSpace {
             char c = s.charAt(i);
             if (c == ' ') {
                 if (!lastWasSpace) {
-                    // добавляем ровно один пробел
                     sb.append(' ');
                     lastWasSpace = true;
                 }
@@ -61,7 +60,7 @@ public class ReplaceCharWithSpace {
 
     private static String replaceCharWithSingleSpaces(String s, char search) {
         StringBuilder sb = new StringBuilder();
-        boolean lastWasSpace = false; // отслеживаем, какой символ добавлен последним
+        boolean lastWasSpace = false;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == search) {
